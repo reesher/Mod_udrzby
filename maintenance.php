@@ -2,8 +2,8 @@
 /*
 	Plugin Name: Mód údržby - Expand
 	Plugin URI: http://wordpress.org/plugins/maintenance/
-	Description: Mód údržby od Expandu. Aby Vám na web nikto nechodil!
-	Version: 0.4
+	Description: Mód údržby od Expandu. Aby vám na web nikto neliezol!
+	Version: 0.5
 	Author: Andrej Srna
 	Author URI: https://andrej.space
 	License: GPL2
