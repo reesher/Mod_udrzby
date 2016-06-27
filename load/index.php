@@ -60,13 +60,13 @@
 		<?php do_action('user_content_section'); ?>
 	</div>
 	<?php do_action('after_main_container'); ?>
-	<?php if (isset($mt_options['is_login'])) { ?>
+
 		
 		<div class="login-form-container">
 			<?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
 			<?php do_button_login_form(); ?>
 		</div>	
-	<?php } ?>	
+
 	
 </body>
 </html>
