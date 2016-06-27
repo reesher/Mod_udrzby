@@ -75,7 +75,7 @@
 				<?php screen_icon(); ?>
 				<div class="postbox-container header-container column-1 normal">
 				<h1><?php _e('Mód údžby', 'maintenance');  ?><input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> /> <?php submit_button(__('Uložiť zmeny', 'maintenance'), 'primary'); ?></h1>
-				<?php /* 
+				
 				</div>
 				<div class="clear"></div>
 				<div id="poststuff">
@@ -95,5 +95,5 @@
 				</div>
 			</form>
 		</div>
-	*/ 
+	<?php
 	}

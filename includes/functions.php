@@ -225,9 +225,8 @@
 	
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
-		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-general', __( 'Nastavenia modulu', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-excludepages', 	 __( 'Nepoužívaj na tieto stránky', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -275,19 +274,8 @@
 		<table class="form-table">
 			<tbody>
 		<?php	
-				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', $page_title);
-				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
-				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
-				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
-				generate_number_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
-				generate_number_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
-				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
-				generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
-				do_action('maintenance_background_field');
-				do_action('maintenance_color_fields');
-				do_action('maintenance_font_fields');
-				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
-				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  !empty($mt_option['503_enabled']));
+				generate_check_filed(__('Admin bar', 'maintenance'), __('Zobraziť admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
+				generate_check_filed(__('503', 'maintenance'), __('Služba momentálne nedostupná, Google analytics bude vypnutý.', 'maintenance'), '503_enabled', '503_enabled',  !empty($mt_option['503_enabled']));
 				
 				$gg_analytics_id = '';
 				if (!empty($mt_option['gg_analytics_id'])) {
@@ -295,14 +283,9 @@
 				}
 				
 				generate_input_filed(__('Google Analytics ID',  'maintenance'), 'gg_analytics_id', 'gg_analytics_id', $gg_analytics_id,  __('UA-XXXXX-X', 'maintenance'));
-				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
-
-				if (isset($mt_option['is_blur'])) {
-					if ($mt_option['is_blur']) $is_blur = true; 
-				} 
+				 
 				
-				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', $is_blur);
-				generate_check_filed(__('Login On / Off', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
+				generate_check_filed(__('Prihlásenie Zapnuté/Vypnuté', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
 		?>		
 			</tbody>
 		</table>
@@ -328,7 +311,7 @@
 		$out_filed .= '<table class="form-table">';
 			$out_filed .= '<tbody>';
 			$out_filed .= '<tr valign="top">';	
-				$out_filed .= '<th colspan="2" scope="row">' . __('Select the page to be displayed:', 'maintenance') .'</th>';
+				$out_filed .= '<th colspan="2" scope="row">' . __('Vyberte si stránky na ktoré nebude uvalený Mód údržby:', 'maintenance') .'</th>';
 			$out_filed .= '</tr>';
 						
 			foreach ($post_types as $post_slug => $type) {
