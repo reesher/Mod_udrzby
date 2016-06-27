@@ -11,6 +11,13 @@
     width: 100%;
     padding-top: 50px;
 }
+div#promo {
+    display: none;
+}
+div#promo:after {
+    content:"";
+	
+}
 /*Checkbox*/
 .tzCheckBox {background:url( '../images/background.png ') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin:8px 0 0 20px;}
 .tzCheckBox.checked{background-position:top left;margin:8px 0 0 18px;}
@@ -45,7 +52,15 @@
 #maintenance-options input#logo_height { width:100%; }
 #maintenance-options input.social-input {width:50%;}
 #maintenance-options input[type="checkbox"] { margin:0 5px 0 0; }
-#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 65%;}
+#maintenance-options #poststuff .metabox-holder .postbox-container.column-1 {
+    float: none;
+    width: 100%;
+   
+}
+div#maintenance-options {
+    max-width: 1100px;
+    margin: 30px auto;
+}
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 28%; min-width:300px;}
 #maintenance-options.wrap form p.submit {clear:both;}
 

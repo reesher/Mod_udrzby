@@ -91,7 +91,7 @@
 						</div>
 
 					</div>
-					<?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?>
+					<?php submit_button(__('Uložiť zmeny', 'maintenance'), 'primary'); ?>
 				</div>
 			</form>
 		</div>

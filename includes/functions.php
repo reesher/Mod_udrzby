@@ -451,18 +451,7 @@
 	}
 	
 	function maintenanace_extended_version() {
-		$promo_text  = '';
-		$promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
-			$promo_text .= '<h4 class="star">'. __('Extended functionality','maintenance') .'</h3>';
-			$promo_text .= '<p>' . sprintf(__('Purchase <a href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode" target="_blank">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5">rate it</a>, <a title="leave feedbacks" href="%2$s" target="_blank">leave feedbacks</a>.', 'maintenance'), 
-										   '<br />',
-										   'http://wordpress.org/support/view/plugin-reviews/maintenance') .'</p>';
-			$promo_text .= sprintf('<a class="button button-primary" title="%1$s" href="%2$s" target="_blank">%1$s</a>', 
-							__('Demo website', 'maintenance'),
-							'http://plugins.fruitfulcode.com/maintenance/'
-							);
-		$promo_text .= '</div>';	
-		echo $promo_text;
+	
 	}
 	
 	function mt_curPageURL() {
@@ -583,7 +572,7 @@
 		} else {
 			$check = 'Vypnutý';
 		}
-		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check)));	
+		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Mód údržby', 'maintenance' ) . ' je ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Mód údržby', 'maintenance' ) . ' je ' . $check)));	
 	} 
 	
 	
