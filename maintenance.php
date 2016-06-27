@@ -23,6 +23,17 @@
 	along with this program; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+if( ! class_exists( 'Smashing_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+$updater = new Smashing_Updater( __FILE__ );
+$updater->set_username( 'reesher' );
+$updater->set_repository( 'Mod_udrzby' );
+/*
+	$updater->authorize( 'abcdefghijk1234567890' ); // Your auth code goes here for private repos
+*/
+$updater->initialize();
+
 
 class maintenance {
 		function __construct() {
