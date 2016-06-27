@@ -231,11 +231,11 @@ function get_custom_login_code() {
 		}
 
 		$out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
-				$out_login_form .= '<label for="">'. __('User Login', 'maintenance') .'</label>';
-				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'.  $user_login .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
-				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Password', 'maintenance') .'" /></span>';
-				$out_login_form .= '<a class="lost-pass" href="'.esc_url(wp_lostpassword_url()).'" title="'.__('Lost Password', 'maintenance') .'">'.__('Lost Password', 'maintenance') .'</a>';
-				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Login','maintenance') .'" tabindex="4" />';
+				$out_login_form .= '<label for="">'. __('Prihlásenie', 'maintenance') .'</label>';
+				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'.  $user_login .'" size="20"  class="input username" placeholder="'. __('Meno', 'maintenance') .'"/></span>';
+				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Heslo', 'maintenance') .'" /></span>';
+				$out_login_form .= '<a class="lost-pass" href="'.esc_url(wp_lostpassword_url()).'" title="'.__('Lost Password', 'maintenance') .'">'.__('Stratili ste heslo?', 'maintenance') .'</a>';
+				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Prihlásiť sa','maintenance') .'" tabindex="4" />';
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';
 

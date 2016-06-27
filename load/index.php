@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<?php get_page_title(esc_attr($mess_arr[0])); ?>
+	<title>Mód údržby je zapnutý</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1">
 	<meta property="og:title" content="Mód údržby"/>
 	<meta property="og:type" content="Mód údržby"/>
