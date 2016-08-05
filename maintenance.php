@@ -1,8 +1,8 @@
 <?php
 /*
-	Plugin Name: Mód údržby - Expand
-	Plugin URI: http://wordpress.org/plugins/maintenance/
-	Description: Mód údržby od Expandu. Aby vám na web nikto neliezol!
+	Plugin Name: EXP - Mód údržby
+	Plugin URI: https://expand.sk
+	Description: Mód údržby. Uzamknutie stránky pre návštevníkmi.
 	Version: 0.5
 	Author: Andrej Srna
 	Author URI: https://andrej.space
